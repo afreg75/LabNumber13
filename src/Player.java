@@ -1,18 +1,10 @@
-
 public abstract class Player {
 	
 	private String name;
-	private Roshambo value;
 	
-	public Player () {}
-
-	public Roshambo getValue() {
-		return value;
-	}
-
-	public void setValue(Roshambo value) {
-		this.value = value;
-	}
+	public Player (String name) {
+this.name = name;
+}
 
 	public String getName() {
 		return name;
@@ -22,10 +14,10 @@ public abstract class Player {
 		this.name = name;
 	}
 
-	public abstract Roshambo generateRashambo();
-
-	public Roshambo generateRoshambo() {
-		// TODO Auto-generated method stub
-		return null;
+	@Override
+	public String toString() {
+		return "Player [name=" + name + "]";
 	}
+	
+	public abstract Roshambo generateRoshambo();
 }
